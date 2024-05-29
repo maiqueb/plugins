@@ -36,3 +36,7 @@ func ExecDel(plugin string, netconf []byte) error {
 func ExecStatus(plugin string, netconf []byte) error {
 	return invoke.DelegateStatus(context.TODO(), plugin, netconf, nil)
 }
+
+func ExecGC(plugin string, netconf []byte) error {
+	return invoke.DelegateGC(context.TODO(), plugin, netconf, nil)
+}
